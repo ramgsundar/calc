@@ -298,19 +298,20 @@
       const D  = (A + B + C) / 3;
       const FR = A - B;
       const HR = (A - B) / 2;
-      const L1 = D + HR;
-      const L2 = D + FR;
-      const L3 = D - HR;
-      const L4 = D - FR;
+      const V1 = D + FR;
+      const V2 = D + HR;
+      const V3 = D - HR;
+      const V4 = D - FR;
 
       document.getElementById('D').textContent  = D.toFixed(2);
       document.getElementById('FR').textContent = FR.toFixed(2);
       document.getElementById('HR').textContent = HR.toFixed(2);
-      document.getElementById('L1').textContent = L1.toFixed(2);
-      document.getElementById('L2').textContent = L2.toFixed(2);
-      document.getElementById('L3').textContent = L3.toFixed(2);
-      document.getElementById('L4').textContent = L4.toFixed(2);
+      document.getElementById('V1').textContent = V1.toFixed(2);
+      document.getElementById('V2').textContent = V2.toFixed(2);
+      document.getElementById('V3').textContent = V3.toFixed(2);
+      document.getElementById('V4').textContent = V4.toFixed(2);
     }
   </script>
 </body>
 </html>
+
