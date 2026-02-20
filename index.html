@@ -38,7 +38,7 @@
       border-radius: 16px;
       border: 1px solid var(--border);
       padding: 20px 18px;
-      max-width: 460px;
+      max-width: 500px;
       width: 100%;
       box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
     }
@@ -223,7 +223,7 @@
   <div class="card">
     <h2>A, B, C, E, F Calculator</h2>
     <p class="subtitle">
-      D, FR, HR, V1–V4, P, Ra, SD, G, H, CW, J, K, PW (2 decimal places)
+      D, FR, HR, V1–V4, P, Ra, SD, G, H, PW, J, K, CW (2 decimal places)
     </p>
 
     <div class="inputs-row">
@@ -275,12 +275,15 @@
         <div class="result-row"><span class="result-label">Ra</span><span class="result-value" id="Ra">--</span></div>
         <div class="result-row"><span class="result-label">SD</span><span class="result-value" id="SD">--</span></div>
 
+        <!-- E chain: show G, H, PW -->
         <div class="result-row"><span class="result-label">G</span><span class="result-value" id="G">--</span></div>
         <div class="result-row"><span class="result-label">H</span><span class="result-value" id="H">--</span></div>
-        <div class="result-row"><span class="result-label">CW</span><span class="result-value" id="CW">--</span></div>
+        <div class="result-row"><span class="result-label">PW</span><span class="result-value" id="PW">--</span></div>
+
+        <!-- F chain: show J, K, CW -->
         <div class="result-row"><span class="result-label">J</span><span class="result-value" id="J">--</span></div>
         <div class="result-row"><span class="result-label">K</span><span class="result-value" id="K">--</span></div>
-        <div class="result-row"><span class="result-label">PW</span><span class="result-value" id="PW">--</span></div>
+        <div class="result-row"><span class="result-label">CW</span><span class="result-value" id="CW">--</span></div>
       </div>
     </div>
   </div>
@@ -320,11 +323,11 @@
 
       const G  = E - (E * percent); // E - 73.89% of E
       const H  = G * percent;       // H = G * 73.89%
-      const CW = H * factor;        // CW = H * 3.83
+      const PW = H * factor;        // PW = H * 3.83
 
       const J  = F - (F * percent); // F - 73.89% of F
       const K  = J * percent;       // K = J * 73.89%
-      const PW = K * factor;        // PW = K * 3.83
+      const CW = K * factor;        // CW = K * 3.83
 
       // Output
       document.getElementById('D').textContent  = D.toFixed(2);
@@ -340,10 +343,10 @@
 
       document.getElementById('G').textContent  = G.toFixed(2);
       document.getElementById('H').textContent  = H.toFixed(2);
-      document.getElementById('CW').textContent = CW.toFixed(2);
+      document.getElementById('PW').textContent = PW.toFixed(2);
       document.getElementById('J').textContent  = J.toFixed(2);
       document.getElementById('K').textContent  = K.toFixed(2);
-      document.getElementById('PW').textContent = PW.toFixed(2);
+      document.getElementById('CW').textContent = CW.toFixed(2);
     }
   </script>
 </body>
