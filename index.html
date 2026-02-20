@@ -222,7 +222,7 @@
 <body>
   <div class="card">
     <h2>A, B, C Calculator</h2>
-    <p class="subtitle">Computes D, FR, HR, L1–L4 (2 decimal places)</p>
+    <p class="subtitle">Computes D, FR, HR, V1–V4, P, Ra, SD (2 decimal places)</p>
 
     <div class="inputs-row">
       <div class="form-group">
@@ -263,20 +263,32 @@
           <span class="result-value" id="HR">--</span>
         </div>
         <div class="result-row">
-          <span class="result-label">L1</span>
-          <span class="result-value" id="L1">--</span>
+          <span class="result-label">V1</span>
+          <span class="result-value" id="V1">--</span>
         </div>
         <div class="result-row">
-          <span class="result-label">L2</span>
-          <span class="result-value" id="L2">--</span>
+          <span class="result-label">V2</span>
+          <span class="result-value" id="V2">--</span>
         </div>
         <div class="result-row">
-          <span class="result-label">L3</span>
-          <span class="result-value" id="L3">--</span>
+          <span class="result-label">V3</span>
+          <span class="result-value" id="V3">--</span>
         </div>
         <div class="result-row">
-          <span class="result-label">L4</span>
-          <span class="result-value" id="L4">--</span>
+          <span class="result-label">V4</span>
+          <span class="result-value" id="V4">--</span>
+        </div>
+        <div class="result-row">
+          <span class="result-label">P</span>
+          <span class="result-value" id="P">--</span>
+        </div>
+        <div class="result-row">
+          <span class="result-label">Ra</span>
+          <span class="result-value" id="Ra">--</span>
+        </div>
+        <div class="result-row">
+          <span class="result-label">SD</span>
+          <span class="result-value" id="SD">--</span>
         </div>
       </div>
     </div>
@@ -298,10 +310,15 @@
       const D  = (A + B + C) / 3;
       const FR = A - B;
       const HR = (A - B) / 2;
+
       const V1 = D + FR;
       const V2 = D + HR;
       const V3 = D - HR;
       const V4 = D - FR;
+
+      const P  = D;                 // P = D
+      const Ra = (D - B) * 2 + A;   // Ra = (D - B)*2 + A
+      const SD = (A - D) * 2 - C;   // sd = (A - D)*2 - C
 
       document.getElementById('D').textContent  = D.toFixed(2);
       document.getElementById('FR').textContent = FR.toFixed(2);
@@ -310,8 +327,10 @@
       document.getElementById('V2').textContent = V2.toFixed(2);
       document.getElementById('V3').textContent = V3.toFixed(2);
       document.getElementById('V4').textContent = V4.toFixed(2);
+      document.getElementById('P').textContent  = P.toFixed(2);
+      document.getElementById('Ra').textContent = Ra.toFixed(2);
+      document.getElementById('SD').textContent = SD.toFixed(2);
     }
   </script>
 </body>
 </html>
-
