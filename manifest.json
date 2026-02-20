@@ -2,7 +2,8 @@
   "name": "ABC Calculator",
   "short_name": "ABC Calc",
   "description": "Scientific calculator for D, FR, HR, L1-L4 formulas",
-  "start_url": "/",
+  "start_url": "/calc/index.html",
+  "scope": "/calc/",
   "display": "standalone",
   "background_color": "#020617",
   "theme_color": "#2563eb",
@@ -14,9 +15,5 @@
       "type": "image/svg+xml"
     },
     {
-      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iNjQiIGZpbGw9IiMyNTYzZWIiLz4KPHRleHQgeD0iMjU2IiB5PSIzMjAiIGZvbnQtZmFtaWx5PSJNb25hY28iIGZvbnQtc2l6ZT0iMjAwIiBmaWxsPSIjZjlmYWZiIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIj5BQkM8L3RleHQ+Cjwvc3ZnPg==",
-      "sizes": "512x512",
-      "type": "image/svg+xml"
-    }
-  ]
-}
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iNjQiIGZpbGw9IiMyNTYzZWIiLz4KPHRleHQgeD0iMjU2IiB5PSIzMjAiIG
+
