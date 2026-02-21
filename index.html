@@ -323,11 +323,12 @@
 
       const G  = E - (E * percent); // E - 73.89% of E
       const H  = G * percent;       // H = G * 73.89%
-      const PW = H * factor;        // PW = H * 3.83
+             
 
       const J  = F - (F * percent); // F - 73.89% of F
       const K  = J * percent;       // K = J * 73.89%
-      const CW = K * factor;        // CW = K * 3.83
+      const PW = K * factor;        // CW = K * 3.83
+      const CW = H * factor;       
 
       // Output
       document.getElementById('D').textContent  = D.toFixed(2);
@@ -351,4 +352,5 @@
   </script>
 </body>
 </html>
+
 
